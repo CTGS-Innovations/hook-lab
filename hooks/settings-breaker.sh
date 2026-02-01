@@ -10,7 +10,7 @@
 # - Re-read settings per-hook (might work)
 # - Detect corruption and fail (unknown behavior)
 
-SETTINGS_FILE="$HOME/.claude/settings.local.json"
+SETTINGS_FILE="/home/corey/hook-lab/.claude/settings.local.json"
 BACKUP_FILE="/home/corey/hook-lab/results/settings-backup.json"
 GATE_FILE="/home/corey/hook-lab/results/work-gate"
 LOG_FILE="/home/corey/hook-lab/results/hook-fires.log"

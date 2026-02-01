@@ -5,7 +5,7 @@
 set -e
 
 LAB_DIR="/home/corey/hook-lab"
-SETTINGS_FILE="$HOME/.claude/settings.local.json"
+SETTINGS_FILE="$LAB_DIR/.claude/settings.local.json"
 BACKUP_FILE="$LAB_DIR/results/settings-backup.json"
 
 # Colors
