@@ -1,0 +1,16 @@
+{
+  "_comment": "Test 2: Command with context injection - measure token cost of returned context",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/corey/hook-lab/hooks/context-inject.py",
+            "timeout": 2
+          }
+        ]
+      }
+    ]
+  }
+}

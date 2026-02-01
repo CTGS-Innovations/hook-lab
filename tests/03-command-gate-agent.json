@@ -1,0 +1,28 @@
+{
+  "_comment": "Test 3: Hybrid command-gate-agent pattern",
+  "_theory": "Command on UserPromptSubmit sets gate (FREE), command on Stop reads gate and conditionally outputs",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/corey/hook-lab/hooks/gate-checker.sh",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/corey/hook-lab/hooks/gate-reader.sh",
+            "timeout": 2
+          }
+        ]
+      }
+    ]
+  }
+}

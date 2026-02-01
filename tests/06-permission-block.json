@@ -1,0 +1,24 @@
+{
+  "_comment": "Test 6: Permission block pattern",
+  "_theory": "Can command exit(2) block subsequent hooks? Does that save tokens?",
+  "_note": "exit(2) = block action, but does it stop hook chain processing?",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f /home/corey/hook-lab/results/work-gate ] && exit 0 || exit 2",
+            "timeout": 2
+          },
+          {
+            "type": "agent",
+            "prompt": "This should only run if gate exists. Do the work.",
+            "timeout": 30,
+            "model": "haiku"
+          }
+        ]
+      }
+    ]
+  }
+}
