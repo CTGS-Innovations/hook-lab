@@ -1,7 +1,8 @@
 {
-  "_comment": "Test 6: Permission block pattern",
-  "_theory": "Can command exit(2) block subsequent hooks? Does that save tokens?",
-  "_note": "exit(2) = block action, but does it stop hook chain processing?",
+  "_test": "6-block",
+  "_hypothesis": "exit(2) in command blocks subsequent hooks in same array",
+  "_expected": "IF TRUE: Δ = 0 (agent never runs). IF FALSE: Δ = agent overhead",
+  "_critical": "This determines if scheduler pattern is viable",
   "hooks": {
     "Stop": [
       {
@@ -13,7 +14,7 @@
           },
           {
             "type": "agent",
-            "prompt": "This should only run if gate exists. Do the work.",
+            "prompt": "Gate exists. Return {work: true}.",
             "timeout": 30,
             "model": "haiku"
           }

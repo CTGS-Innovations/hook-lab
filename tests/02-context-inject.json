@@ -1,5 +1,7 @@
 {
-  "_comment": "Test 2: Command with context injection - measure token cost of returned context",
+  "_test": "2-context",
+  "_hypothesis": "additionalContext adds tokens proportional to content size",
+  "_expected": "Δ = ~15 tokens (50 chars of context)",
   "hooks": {
     "UserPromptSubmit": [
       {

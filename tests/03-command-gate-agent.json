@@ -1,6 +1,7 @@
 {
-  "_comment": "Test 3: Hybrid command-gate-agent pattern",
-  "_theory": "Command on UserPromptSubmit sets gate (FREE), command on Stop reads gate and conditionally outputs",
+  "_test": "3-gate",
+  "_hypothesis": "Command gate pattern: Submit sets file, Stop reads conditionally",
+  "_expected": "Δ = 0 when no gate, Δ = ~15 when gate exists",
   "hooks": {
     "UserPromptSubmit": [
       {

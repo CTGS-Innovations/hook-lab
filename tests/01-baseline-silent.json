@@ -1,5 +1,7 @@
 {
-  "_comment": "Test 1: Silent command hook - should cost 0 tokens",
+  "_test": "1-silent",
+  "_hypothesis": "Command with no stdout costs 0 tokens",
+  "_expected": "Δ = 0 vs baseline",
   "hooks": {
     "UserPromptSubmit": [
       {

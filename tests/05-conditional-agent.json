@@ -1,8 +1,8 @@
 {
-  "_comment": "Test 5: Conditional agent - only runs if gate file exists",
-  "_theory": "Can we make agent conditional via command output?",
-  "_problem": "Hooks in same array run in PARALLEL - can't chain command→agent",
-  "_solution": "Use separate hook event OR file from PREVIOUS event",
+  "_test": "5-conditional",
+  "_hypothesis": "Agent can check gate file and exit early if no work",
+  "_expected": "Δ = agent overhead (agent still runs, just exits fast)",
+  "_note": "Agent runs regardless - tests agent self-gating",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -19,13 +19,8 @@
       {
         "hooks": [
           {
-            "type": "command",
-            "command": "cat /home/corey/hook-lab/results/work-gate 2>/dev/null && echo '{\"hookSpecificOutput\": {\"additionalContext\": \"TRIGGER_AGENT\"}}' || true",
-            "timeout": 2
-          },
-          {
             "type": "agent",
-            "prompt": "Check if /home/corey/hook-lab/results/work-gate exists. If yes, read /home/corey/hook-lab/results/pending-task.json and execute it. If no, return immediately.",
+            "prompt": "Check if /home/corey/hook-lab/results/work-gate exists. If yes, return {work: true}. If no, return {work: false} immediately.",
             "timeout": 30,
             "model": "haiku"
           }

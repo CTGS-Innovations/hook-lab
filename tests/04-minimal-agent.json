@@ -1,6 +1,7 @@
 {
-  "_comment": "Test 4: Minimal agent hook - measure baseline agent cost",
-  "_theory": "What's the absolute minimum token cost for an agent that does nothing?",
+  "_test": "4-agent",
+  "_hypothesis": "Minimal agent has fixed overhead cost",
+  "_expected": "Δ = 500-2000 tokens (agent framework)",
   "hooks": {
     "Stop": [
       {

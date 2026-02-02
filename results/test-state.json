@@ -1,0 +1,71 @@
+{
+  "step": 7,
+  "phase": "ready",
+  "tests": [
+    {
+      "name": "baseline",
+      "config": null,
+      "desc": "No hooks (control)"
+    },
+    {
+      "name": "test1",
+      "config": "01-baseline-silent.json",
+      "desc": "Silent command hook"
+    },
+    {
+      "name": "test2",
+      "config": "02-context-inject.json",
+      "desc": "Context injection"
+    },
+    {
+      "name": "test3",
+      "config": "03-command-gate-agent.json",
+      "desc": "Command gate pattern"
+    },
+    {
+      "name": "test4",
+      "config": "04-minimal-agent.json",
+      "desc": "Minimal agent hook"
+    },
+    {
+      "name": "test5",
+      "config": "05-conditional-agent.json",
+      "desc": "Conditional agent"
+    },
+    {
+      "name": "test6",
+      "config": "06-permission-block.json",
+      "desc": "Permission block pattern"
+    }
+  ],
+  "sessions": {
+    "baseline": {
+      "session_id": "9a270c4c-3128-493e-8f31-67348fbf061d",
+      "timestamp": "2026-02-01T19:35:57.377418"
+    },
+    "test1": {
+      "session_id": "6d832491-77d9-4c04-81c1-1fcfc357e05e",
+      "timestamp": "2026-02-01T19:36:02.052430"
+    },
+    "test2": {
+      "session_id": "2a4335cb-fd4f-4487-8c9d-b8459165e22c",
+      "timestamp": "2026-02-01T19:36:05.669483"
+    },
+    "test3": {
+      "session_id": "a292d459-80ba-43b0-b776-c4aa91697f09",
+      "timestamp": "2026-02-01T19:36:09.657652"
+    },
+    "test4": {
+      "session_id": "e2319e68-abfe-45b4-802e-9b231b97efd6",
+      "timestamp": "2026-02-01T19:36:13.296269"
+    },
+    "test5": {
+      "session_id": "8eb49bbd-a35c-4a76-8abb-ed0636cfc97f",
+      "timestamp": "2026-02-01T19:36:17.111136"
+    },
+    "test6": {
+      "session_id": "89a71311-484b-4f67-95f2-2e8f220b005c",
+      "timestamp": "2026-02-01T19:36:21.369973"
+    }
+  }
+}
